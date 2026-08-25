@@ -1,0 +1,2 @@
+El único requerimiento es tener python 3.8 o superior, las demas librerias no requieren
+instalacion, solamente importación
