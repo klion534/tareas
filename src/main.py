@@ -4,18 +4,33 @@ Orquesta la aplicación y maneja el flujo principal del programa.
 """
 
 import sys
-from src.storage import guardar_tareas, cargar_tareas
-from src.tareas import completar_tarea, eliminar_tarea
-from src.cli import (
-    mostrar_menu,
-    obtener_opcion,
-    agregar_tarea_interactiva,
-    listar_tareas,
-    mostrar_estadisticas,
-    buscar_tarea_interactiva,
-    obtener_indice,
-    confirmar_salida
-)
+
+try:
+    from src.storage import guardar_tareas, cargar_tareas
+    from src.tareas import completar_tarea, eliminar_tarea
+    from src.cli import (
+        mostrar_menu,
+        obtener_opcion,
+        agregar_tarea_interactiva,
+        listar_tareas,
+        mostrar_estadisticas,
+        buscar_tarea_interactiva,
+        obtener_indice,
+        confirmar_salida
+    )
+except ModuleNotFoundError:
+    from storage import guardar_tareas, cargar_tareas
+    from tareas import completar_tarea, eliminar_tarea
+    from cli import (
+        mostrar_menu,
+        obtener_opcion,
+        agregar_tarea_interactiva,
+        listar_tareas,
+        mostrar_estadisticas,
+        buscar_tarea_interactiva,
+        obtener_indice,
+        confirmar_salida
+    )
 
 
 def main():

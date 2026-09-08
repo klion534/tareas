@@ -5,15 +5,27 @@ Contiene todas las funciones de interacción con el usuario.
 
 import sys
 from typing import List, Dict
-from src.tareas import (
-    crear_tarea,
-    listar_tareas,
-    completar_tarea,
-    eliminar_tarea,
-    obtener_estadisticas,
-    buscar_tarea
-)
-from src.storage import guardar_tareas
+
+try:
+    from src.tareas import (
+        crear_tarea,
+        listar_tareas,
+        completar_tarea,
+        eliminar_tarea,
+        obtener_estadisticas,
+        buscar_tarea
+    )
+    from src.storage import guardar_tareas
+except ModuleNotFoundError:
+    from tareas import (
+        crear_tarea,
+        listar_tareas,
+        completar_tarea,
+        eliminar_tarea,
+        obtener_estadisticas,
+        buscar_tarea
+    )
+    from storage import guardar_tareas
 
 
 def mostrar_menu():
