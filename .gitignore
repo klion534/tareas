@@ -1,3 +1,15 @@
-# Archivos de datos del proyecto
-tareas.json
-*.json
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+
+# Local environments
+.venv/
+venv/
+
+# Local task data
+/tareas.json
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
